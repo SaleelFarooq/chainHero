@@ -1,0 +1,34 @@
+{{define "title"}}Request{{end}}
+
+{{define "body"}}
+<h2>Create or Update</h2>
+<br><br>
+{{ if .Response }}
+{{ if .Success }}
+<div class="alert alert-success" role="alert">
+    Successful request, transaction ID: {{ .TransactionId }}
+</div>
+{{ else }}
+<div class="alert alert-danger" role="alert">
+    Unable to submit the request, retry later.
+</div>
+{{ end }}
+{{ end }}
+
+<form class="form-inline" action="request.html" method="post">
+    <div class="form-group">
+        <label for="helloValue">Key</label>
+        <input type="text" class="form-control" id="ItemKey" placeholder="Item Key" name="key">
+        <label for="value">Item Name</label>
+        <input type="text" class="form-control" id="value" placeholder="item name" name="itemname">
+    <label for="value">Name Of Person</label>
+        <input type="text" class="form-control" id="value" placeholder="Name of Person" name="nameofperson">
+    <label for="value">Selling VAlue</label>
+        <input type="text" class="form-control" id="value" placeholder="selling value" name="sellingvalue">
+    </div>
+    <input type="hidden" name="submitted" value="true">
+    <button type="submit" class="btn btn-default">Send the request</button>
+</form>
+
+
+{{end}}

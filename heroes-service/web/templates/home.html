@@ -1,0 +1,38 @@
+{{define "title"}}Home{{end}}
+
+{{define "body"}}
+<div class="container">
+
+</div>
+<h2>Home</h2>
+<br>
+{{.ResponseData}}
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      
+      <th scope="col">ItemKey</th>
+      <th scope="col">ItemName</th>
+       <th scope="col">NameOf Person</th>
+       <th scope="col">Selling VAlue</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{range $i, $BlockResponse := .ResponseData}}
+    {{$BlockResponse}}
+    <tr>
+     
+      <td>{{$BlockResponse.Key}}</td>
+      <td>{{$BlockResponse.Record.ItemName}}</td>
+	<td>{{$BlockResponse.Record.NameOfPerson}}</td>
+	<td>{{$BlockResponse.Record.SellingValue}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+
+{{end}}
+
+
+

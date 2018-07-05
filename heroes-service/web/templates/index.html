@@ -1,0 +1,69 @@
+{{define "title"}}Login{{end}}
+
+{{define "body"}}   
+
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<div class="container">
+
+</div>
+<h2>Home</h2>
+<br>
+        <div class="container">    
+            
+                    <h1 class="text-center" style="font-family: 'Oswald Bold', sans-serif">Supply Chain Management System</h1>
+                    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+                        <div class="panel panel-info" >
+                                <div class="panel-heading">
+                                    <div class="panel-title">Log in as..</div>
+                                </div>     
+            
+                                <div style="padding-top:30px" class="panel-body" >
+				 </div>
+			           
+                                        
+		<form method="post" action="/internal.html">           
+<p><input type="text" placeholder="Username" name="username" required></p>
+<p><input type="password" placeholder="**********"  name="password" required></p>
+<input type="radio" name="type" value="producer">Producer<br>
+<input type="radio" name="type" value="middleman" checked>Middleman<br>
+<input type="radio" name="type" value="consumer"> Consumer<br>  
+<p><input type="submit" class="btn btn-success" value="LOGIN"  name ="login"></p>
+</form>
+ <br/>
+	</div>
+		</div>
+	</div> 
+
+
+ <div class="container">    
+            
+                    
+                    <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+                        <div class="panel panel-info" >
+                                <div class="panel-heading">
+                                    <div class="panel-title">Sign Up Here..</div>
+                                </div>     
+            
+                                <div style="padding-top:30px" class="panel-body" >
+            			</div>
+<form method="post" action="/register.html">
+<p><input type="text" placeholder="Enter Username"  name="username" required></p>
+<input type="radio" name="type" value="producer">Producer<br>
+<input type="radio" name="type" value="middleman" checked>Middleman<br>
+<input type="radio" name="type" value="consumer"> Consumer<br> 
+<p><input type="password" placeholder="Enter Password"  name="password1" required></p>
+<p><input type="password" placeholder="Confirm Password"  name="password2" required></p>
+<p><input type="submit" class="btn btn-info" value="SIGNUP"  name ="signup"></p>
+</form>           
+            
+            
+                                    </div>                     
+                    </div>  
+        </div>
+
+    </body>
+</html>
+{{end}}
